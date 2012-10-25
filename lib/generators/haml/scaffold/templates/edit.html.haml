@@ -1,0 +1,5 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), <%= plural_name %>_path
+  = link_to t('show'), @<%= singular_name %>
+= render 'form'

@@ -1,0 +1,10 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), <%= plural_name %>_path
+  = link_to t('edit'), edit_<%= singular_name %>_path(@<%= singular_name %>)
+
+%dl
+<% for attribute in attributes -%>
+  %dt= <%= class_name %>.human_attribute_name :<%= attribute.name %>
+  %dd= @<%= singular_name %>.<%= attribute.name %>
+<% end -%>
