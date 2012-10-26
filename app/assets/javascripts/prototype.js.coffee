@@ -1,12 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
   $("#components #tabs").tabs();
-  $("#properties").dialog();
+  $("#properties").dialog({ "position":[$(document).width() -  350,$("header").height() + 35] });
   setDimensions = ->
-    $("#components").height  $(document).height() - $("header").height();
+    $("#components").height  $(document).height() - $("header").height()
+    $("#shadow_h").height $(document).height() - $("header").height()
     $("#grid").width $(document).width() - $("#components").width() - 1
+    $("#shadow_h").css "left",  $("#components").width()
     $("#grid").height  $(document).height() - $("header").height()
   setDimensions();
   $(window).resize -> 

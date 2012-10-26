@@ -16,7 +16,16 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
-//= require backbone/seacon_ebs_demo
+//= require backbone/seacon_esb_demo
+//= require hamlcoffee
 //= require jquery.ui.all
+//= require jsPlumb/js/lib/jsBezier-0.4-min
+//= require jsPlumb/js/1.3.16/jsPlumb-util-1.3.16-RC1
+//= require jsPlumb/js/1.3.16/jsPlumb-dom-adapter-1.3.16-RC1
+//= require jsPlumb/js/1.3.16/jsPlumb-drag-1.3.16-RC1
+//= require jsPlumb/js/1.3.16/jsPlumb-1.3.16-RC1
+//= require jsPlumb/js/1.3.16/jsPlumb-defaults-1.3.16-RC1
+//= require jsPlumb/js/1.3.16/jsPlumb-renderers-svg-1.3.16-RC1
+//= require jsPlumb/js/1.3.16/jquery.jsPlumb-1.3.16-RC1
 //
 //= require_tree .

@@ -4,16 +4,14 @@
     %title= "Seacon ESB Demo"
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
-    %link{href: 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900', rel: 'stylesheet', type:'text/css'}
-
     = csrf_meta_tags
   %body
-    #properties{:title => "Properties"}
     %header
       #titlebar
         %h1
           Seacon ESB Demo
       #toolbar= link_to "Save" , "#"
+    #properties{:title => "Properties"}
     #editor
       #shadow
       #components
@@ -24,13 +22,17 @@
           #routes
             %h2 Available routes
             %ul
-              %li.active Route 1
+              %li.active.first Route 1
               %li Route 2
               %li Route 3
               %li Route 4
           #library
-            Libary
-              
-          
+            %ul 
+              %li.SOAP_endpoint
+                .image
+                .label Soap endpoint
+            #derp
+                
+                
+      #shadow_h
       #grid
-
