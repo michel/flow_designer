@@ -1,21 +1,20 @@
 class SeaconEsbDemo.Views.Editor extends Backbone.View
-  events:
-    "click #grid": "add_node"
-  library: [ new SeaconEsbDemo.Models.NodeSoapEndpoint, new SeaconEsbDemo.Models.NodeSoapEndpoint ]
 
-  initialize: ->
-    @populate_libary()
+  render: ->
+   @collection.each (component) =>
+    $("#library ul").append new SeaconEsbDemo.Views.LibraryComponent(model: component).render().el
+   
+    $("#library ul li").draggable 
+      appendTo: "#grid"
+      helper: "clone"
 
-  populate_libary: ->
-    #for component in @library
-      #   $("#library ul").append new SeaconEsbDemo.Views.LibraryComponent(model: component).render().el
-    $('#library ul li').draggable ->
-      revert: true
-      snap: true
-      helper: 'clone'
-    $('#derp').droppable ->
-      drop: ->
-       console.log "derp"
+    $("#grid").droppable 
+      activeClass: 'dragged'
+      accept: 'li'
+      drop: (event, ui) => 
+        cid = $(ui.draggable).attr "data-cid"
+        node =  new SeaconEsbDemo.Views.NodeView(model: @collection.getByCid(cid)).render()
+        node.$el.css  ui.position
+        $("#grid").append node.el
+    @
 
-  add_node: ->
-   node =  new SeaconEsbDemo.Views.NodeView.render()

@@ -1,1 +1,3 @@
-derp
+.image
+.label= @model.human_name()
+

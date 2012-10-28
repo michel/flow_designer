@@ -16,3 +16,6 @@ body {
   margin: 0px;
   font-family: Helvetica, Arial, sans-serif;
 }
+li {
+  list-style: none;
+}

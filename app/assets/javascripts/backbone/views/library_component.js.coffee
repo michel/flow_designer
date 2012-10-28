@@ -4,5 +4,6 @@ class SeaconEsbDemo.Views.LibraryComponent extends Backbone.View
   className: =>
     @model.get 'name'
   render: -> 
+    @$el.attr "data-cid", @model.cid 
     @$el.html @template({@model})
     @
