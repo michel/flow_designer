@@ -16,7 +16,7 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
-//= require backbone/seacon_esb_demo
+//= require backbone/flow_designer
 //= require hamlcoffee
 //= require jquery.ui.all
 //= require jsPlumb/js/lib/jsBezier-0.4-min

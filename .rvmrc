@@ -1,1 +1,1 @@
-rvm --create use ruby-1.9.3@seacon_ebs_demo
+rvm --create use ruby-1.9.3@flow_designer

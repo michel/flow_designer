@@ -1,3 +1,3 @@
-SeaconEbsDemo::Application.routes.draw do
+FlowDesigner::Application.routes.draw do
   root :to => 'prototype#index'
 end

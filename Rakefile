@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SeaconEbsDemo::Application.load_tasks
+FlowDesigner::Application.load_tasks
