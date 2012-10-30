@@ -13,7 +13,7 @@ class SeaconEsbDemo.Views.Editor extends Backbone.View
       appendTo: "#grid"
       helper: "clone"
 
-    $("#grid").droppable 
+    $("#grid #route").droppable 
       activeClass: 'dragged'
       accept: 'li'
       drop: (event, ui) => 
@@ -22,7 +22,18 @@ class SeaconEsbDemo.Views.Editor extends Backbone.View
         @nodes.add  model
         node =  new SeaconEsbDemo.Views.NodeView(model: model).render()
         node.$el.css  ui.position
-        $("#grid").append node.el
+        $("#grid #route").append node.el
+        node.setBindings()
+    $("#grid #error").droppable 
+      activeClass: 'dragged'
+      accept: 'li'
+      drop: (event, ui) => 
+        cid = $(ui.draggable).attr "data-cid"
+        model = @collection.getByCid(cid).clone()
+        @nodes.add  model
+        node =  new SeaconEsbDemo.Views.NodeView(model: model).render()
+        node.$el.css  ui.position
+        $("#grid #error").append node.el
         node.setBindings()
     @
 

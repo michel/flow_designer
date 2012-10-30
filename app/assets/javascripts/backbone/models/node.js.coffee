@@ -11,6 +11,7 @@ class SeaconEsbDemo.Models.Node extends Backbone.Model
 
   fieldType: (v) ->
     return 'dropdown' if $.isArray(v)
+    return 'filefield' if v == 'file'
     'textfield'
 
   human_name: ->

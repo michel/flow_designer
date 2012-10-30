@@ -10,7 +10,13 @@
       #titlebar
         %h1
           Seacon ESB Flow designer
-      #toolbar= link_to "Save" , "#"
+        .route_name
+          Route 1
+      #toolbar
+        .save= link_to "Save" , "#"
+        %ul.tabs
+          %li.route= link_to "Route", "#route", :class => "current"
+          %li.error= link_to "Error route", "#error"
     #properties{:title => "Properties"}
     #editor
       #shadow
@@ -28,7 +34,10 @@
               %li Route 4
           #library
             %ul 
-                
-                
       #shadow_h
       #grid
+        #route
+        #error
+          .node.message.error_default
+            .image
+            .label Message

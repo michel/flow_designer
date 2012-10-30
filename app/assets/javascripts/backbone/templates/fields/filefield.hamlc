@@ -1,0 +1,5 @@
+%label{ name: @name} 
+  = @name
+%input{ type: 'file' , value: @value, name: @name}
+%input{ type: 'submit' , value: 'Upload', name:'upload' }
+
