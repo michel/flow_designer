@@ -1,4 +1,4 @@
-jjtitlebar {
+#titlebar {
   background: #343434;
   height:38px;
   h1 {
@@ -141,10 +141,15 @@ jjtitlebar {
       }
       .label {
         color: #6B6A6A;
-        font-size: 12px;
+        font-size: 10px;
         text-align: center;
       }
     }
+  }
+}
+.dragged {
+  .label {
+    display: none;
   }
 }
 .SOAP_endpoint {
@@ -154,7 +159,56 @@ jjtitlebar {
       height: 60px;
    }
 }
+.content_filter {
+   .image {
+      background: url(<%= asset_path 'nodes/content_filter.png' %>) top left no-repeat;
+      width: 100px;
+      height: 60px;
+   }
+}
+.http_endpoint {
+   .image {
+      background: url(<%= asset_path 'nodes/http_endpoint.png' %>) top left no-repeat;
+      width: 100px;
+      height: 60px;
+   }
+}
+.XSLT_translator {
+   .image {
+      background: url(<%= asset_path 'nodes/XSLT_translator.png' %>) top left no-repeat;
+      width: 100px;
+      height: 60px;
+   }
+}
+.expression_translation {
+   .image {
+      background: url(<%= asset_path 'nodes/expression_translation.png' %>) top left no-repeat;
+      width: 100px;
+      height: 60px;
+   }
+}
+.send_email {
+   .image {
+      background: url(<%= asset_path 'nodes/send_email.png' %>) top left no-repeat;
+      width: 100px;
+      height: 60px;
+   }
+}
 
+.file_endpoint {
+   .image {
+      background: url(<%= asset_path 'nodes/file_endpoint.png' %>) top left no-repeat;
+      width: 100px;
+      height: 60px;
+   }
+}
+.send_email {
+   .image {
+      background: url(<%= asset_path 'nodes/file_endpoint.png' %>) top left no-repeat;
+      width: 100px;
+      height: 60px;
+   }
+}
 #routes {
     h2 {
       padding-left: 5px;
@@ -209,15 +263,22 @@ jjtitlebar {
       filter:alpha(opacity=80);
       z-index:20; position:absolute;
       font-family:helvetica;padding:0.5em;
-      font-size:0.9em;
+      font-size:10px;
+      text-align: center;
       left: 10em;
       top: 10em;
     }
   }
 }
-
 .ui-dialog  .ui-widget-header {
   background: url(<%= asset_path 'properties_header_bar.png' %>);
-height: 30px;
-
+  height: 30px;
 }
+
+#properties {
+  font-size: 12px;
+  label,input {
+    display:  block;
+  }
+}
+

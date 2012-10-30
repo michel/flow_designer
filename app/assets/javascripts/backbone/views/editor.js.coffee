@@ -1,4 +1,9 @@
 class SeaconEsbDemo.Views.Editor extends Backbone.View
+  
+  initialize: (obj) ->
+    @el = obj.el
+    @collection =  obj.collection
+    @nodes =  obj.nodes
 
   render: ->
    @collection.each (component) =>
@@ -13,8 +18,11 @@ class SeaconEsbDemo.Views.Editor extends Backbone.View
       accept: 'li'
       drop: (event, ui) => 
         cid = $(ui.draggable).attr "data-cid"
-        node =  new SeaconEsbDemo.Views.NodeView(model: @collection.getByCid(cid)).render()
+        model = @collection.getByCid(cid).clone()
+        @nodes.add  model
+        node =  new SeaconEsbDemo.Views.NodeView(model: model).render()
         node.$el.css  ui.position
         $("#grid").append node.el
+        node.setBindings()
     @
 

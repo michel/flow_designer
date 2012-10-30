@@ -1,4 +1,17 @@
 class SeaconEsbDemo.Models.Node extends Backbone.Model
+  clone: ->
+   new @constructor()
+
+
+  fields: ->
+    fields = []
+    for k,v of @attributes 
+     fields.push [@fieldType(v),[k,v]] 
+    fields 
+
+  fieldType: (v) ->
+    return 'dropdown' if $.isArray(v)
+    'textfield'
 
   human_name: ->
     @get('name').replace '_', ' '

@@ -1,0 +1,6 @@
+%label{name: @name}
+  =@name
+%select{name: @name}
+  - for option in @value
+    %option{value: option}
+      = option

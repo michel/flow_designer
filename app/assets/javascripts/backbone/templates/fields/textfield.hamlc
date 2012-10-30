@@ -1,0 +1,4 @@
+%label{ name: @name} 
+  = @name
+%input{ type: 'text' , value: @value, name: @name}
+

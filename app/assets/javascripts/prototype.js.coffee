@@ -4,7 +4,7 @@ $ ->
   setDimensions = ->
     $("#components").height  $(document).height() - $("header").height()
     $("#shadow_h").height $(document).height() - $("header").height()
-    $("#grid").width $(document).width() - $("#components").width() - 1
+    $("#grid").width $(document).width() - $("#components").width() - 5
     $("#shadow_h").css "left",  $("#components").width()
     $("#grid").height  $(document).height() - $("header").height()
   setDimensions();
