@@ -27,6 +27,7 @@ $ ->
                        new SeaconEsbDemo.Models.NodeDeadLetter,
                        new SeaconEsbDemo.Models.NodeMessage,
                        new SeaconEsbDemo.Models.NodeWiretap,
+                       new SeaconEsbDemo.Models.NodeRecipientList,
                        new SeaconEsbDemo.Models.NodeSendEmail
                        ]
     app.editor = new SeaconEsbDemo.Routers.EditorRouter(app.nodes)
