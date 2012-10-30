@@ -12,6 +12,6 @@ Tools/Libs used:
 	- JQuery UI
 	- Coffeescript
 
-![image](doc/1.png)
-![image](doc/2.png)
+![image](https://raw.github.com/michel/flow_designer/master/doc/1.png)
+![image](https://raw.github.com/michel/flow_designer/master/doc/2.png)
 
