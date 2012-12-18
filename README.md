@@ -12,6 +12,8 @@ Tools/Libs used:
 	- JQuery UI
 	- Coffeescript
 
+This is just a proof of concept, don't use this to build your project on.
+
 ![image](https://raw.github.com/michel/flow_designer/master/doc/1.png)
 ![image](https://raw.github.com/michel/flow_designer/master/doc/2.png)
 
